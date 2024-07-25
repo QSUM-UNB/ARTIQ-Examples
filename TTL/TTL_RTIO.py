@@ -3,7 +3,7 @@ from artiq.experiment import *
 def print_underflow():
 	print('RTIO underflow occurred.')
 
-class Tutorial(EnvExperiment):
+class TTL_RTIO(EnvExperiment):
 	def build(self):
 		self.setattr_device('core')
 		self.setattr_device('ttl4')
