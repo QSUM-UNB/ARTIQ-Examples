@@ -1,6 +1,6 @@
 from artiq.experiment import *
 
-class DDSTest(EnvExperiment):
+class Urukul_Test(EnvExperiment):
 	"""DDS test"""
 
 	def build(self):
