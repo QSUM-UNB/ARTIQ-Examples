@@ -1,7 +1,7 @@
 from artiq.experiment import *
 
 
-class LED(EnvExperiment):
+class TTL_LED_SOS(EnvExperiment):
 	def build(self):
 		self.setattr_device("core")
 		self.setattr_device("led0")
