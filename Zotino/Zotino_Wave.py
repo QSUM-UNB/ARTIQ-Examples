@@ -3,7 +3,7 @@ import numpy as np
 from artiq.experiment import *
 from scipy import signal
 
-class ZotinoTest(EnvExperiment):
+class Zotino_Wave(EnvExperiment):
 	"""Zotino triangle wave"""
 
 	def build(self):
