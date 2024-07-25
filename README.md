@@ -1,10 +1,6 @@
 # ARTIQ-Examples
-Example code for ARTIQ Sinara hardware system
 
-
-# QSUM ARTIQ Examples
-
-Python examples and experiments for ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) systems.
+Example code for ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) hardware systems.
 
 ## Resources
 - Manual: https://m-labs.hk/artiq/manual/
@@ -17,13 +13,13 @@ Python examples and experiments for ARTIQ (Advanced Real-Time Infrastructure for
 
 - Vutha Lab: https://github.com/vuthalab/artiq/tree/main
 
-  Repository of ARTIQ code from Amar Vutha's group at the University of Toronto. This README file and some of our examples are based on their work.
+  Repository of ARTIQ code from Amar Vutha's group at the University of Toronto. Some of our examples are based on their work.
 
 - Duke ARTIQ Extensions (DAX): https://gitlab.com/duke-artiq/dax/-/wikis/home
   
   DAX is a library developed by the Duke Quantum Center that extends the capabilities of ARTIQ. Initially created as a framework to develop modular control software for ARTIQ-based quantum control systems. Users can implement modular control software for their ARTIQ projects using the DAX framework or use other components and utilities provided by DAX in existing projects.
 
-## QSUM ARTIQ system configuration (from M-Labs)
+## QSUM ARTIQ system configuration (UNB Variant from M-Labs)
 - FPGA: Sinara 1124 Processor "Kasli" 2.0 (core device)
 - TTL: 4x Sinara 2128 (SMA), 8-channel isolated DIOs
 - DDS: 1x Sinara 4410 "Urukul" (4x AD9910)
