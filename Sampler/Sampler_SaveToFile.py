@@ -3,7 +3,7 @@ from artiq.coredevice.sampler import adc_mu_to_volt
 import numpy as np
 import csv
 
-class Sampler_SaveToCSV(EnvExperiment):
+class Sampler_SaveToFile(EnvExperiment):
 	kernel_invariants = {"Rate", "Period", "Duration", "nSamples", "nChannels", "Channels", "Names"}
 
 	def build(self):
