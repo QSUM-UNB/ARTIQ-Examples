@@ -2,7 +2,21 @@
 
 Example code for ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) hardware systems.
 
-## Resources
+## Example files
+Below is the list of example files we wrote to test different ARTIQ devices:
+
+1) `Sampler_Fast.py`
+2) `Sampler_Fast_Trigger.py`
+3) `Sampler_SaveToFile.py`
+4) `TTL_SingleRead.py`
+5) `TTL_Trigger.py`
+6) `TTL_led_sos.py`
+7) `TTL_rtio.py`
+8) `Urukul_Test.py`
+9) `Zotino_Test.py`
+10) `Zotino_Wave.py`
+
+## Other Resources
 - Manual: https://m-labs.hk/artiq/manual/
 - Forum: https://forum.m-labs.hk/
 - Device Datasheets: https://m-labs.hk/experiment-control/sinara-core/
@@ -19,7 +33,7 @@ Example code for ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) h
   
   DAX is a library developed by the Duke Quantum Center that extends the capabilities of ARTIQ. Initially created as a framework to develop modular control software for ARTIQ-based quantum control systems. Users can implement modular control software for their ARTIQ projects using the DAX framework or use other components and utilities provided by DAX in existing projects.
 
-## QSUM ARTIQ system configuration (UNB Variant from M-Labs)
+## UNB Variant of ARTIQ (system configuration from M-Labs)
 - FPGA: Sinara 1124 Processor "Kasli" 2.0 (core device)
 - TTL: 4x Sinara 2128 (SMA), 8-channel isolated DIOs
 - DDS: 1x Sinara 4410 "Urukul" (4x AD9910)
@@ -28,9 +42,9 @@ Example code for ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) h
 - DAC Adaptor: 3x Sinara 5528 SMA-IDC (24 DAC outputs)
 - ADC: 1x Sinara 5108 Sampler (8-channel single-ended ADC)
 - Software version installed on Lab PC: ARTIQ v7.8176.6fbfa12 (as of March 1, 2024)
-- Software versions tested elsewhere: v7.8173.ff97675 (Brynle's office PC)
+- Software versions tested elsewhere: v7.8173.ff97675 (office PC)
 
-**Note that the major software version (v7 here) must match the major version of the firmware and gateware installed on the core device.** The software version can be obtained by running `artiq_run --version` from the command line, the gateware version can be obtained from the bootloader during startup (see instructions for using PuTTY).
+**Note that the major software version (ARTIQ v7 here) must match the major version of the firmware and gateware installed on the core device.** The software version can be obtained by running `artiq_run --version` from the command line, the gateware version can be obtained from the bootloader during startup (see instructions for using PuTTY).
 
 ## QSUM Host configuration
 - Machine: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
@@ -309,33 +323,10 @@ def record_result(x):
     self.results.append(x)
 ```
 
-## Example files
-Below is the list of example files we wrote to test different ARTIQ devices:
-
-1) `Sampler_Fast.py`
-2) `Sampler_SaveToFile.py`
-
-<!--
-Below is the list of files we wrote to test the ARTIQ and learn how to use it:
-1) ttl_out.py sends out TTL pulses
-2) ttl_in.py reads in TTL signals 
-3) dds<span>.py sends a simple sine wave out of the DDS
-4) dds_pulse.py sends a signal out of the DDS, turns it off, and turns it back on
-5) dds_modulated.py code to modulate (using RAM), the amplitude and/or frequency of the AD9910
-6) dac<span>.py sends a voltage out of the DAC
-7) dac_modulted.py ramps the voltage out of the DAC. Note this has a slow step time as the DAC has no RAM
-8) parallel_ttl.py an example of running the TTLs in parallel
-9) ttl\_dds\_parallel<span>.py an example of running the TTLs and DDS in parallel
-10) sampler<span>.py an example of taking data using the ADC (requires us to use the Dashboard)
-11) set\_attr\_device\_name.py an example of how we may rename a device
-12) artiq_sequence.py a generic script that allows us to use as many TTL and DDS channels as we want on some predetermined parameters
-13) artiq\_sequence\_fixed_devices.py an alternative to artiq\_sequence.py for a fixed number of devices (never tested, you should just use artiq\_sequence.py)
--->
-
 ## Sinara "TTL"
 
 ### From the datasheet:
-
+- Pending...
 
 ### Other notes about Sinara "TTL"
 - The modes (input and output) of the TTLs are set on the boards. To change them, you must take out the board, locate the switch, and flip it. TTL modes are set in blocks of four. Our system was installed with `ttl0-3` set as input. The remaining channels `ttl4-31` are set as output.
@@ -343,7 +334,7 @@ Below is the list of files we wrote to test the ARTIQ and learn how to use it:
 ## Sinara DDS "Ukurul"
 
 ### From the datasheet:
-
+- Pending...
 
 ### Other notes about Sinara DDS "Ukurul"
 - Time required to set frequency using `dds.set(...)` is approximately 1.25 us
